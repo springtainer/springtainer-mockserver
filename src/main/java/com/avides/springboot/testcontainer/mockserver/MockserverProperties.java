@@ -14,7 +14,7 @@ import lombok.ToString;
 @ToString(callSuper = true)
 public class MockserverProperties extends AbstractEmbeddedContainerProperties
 {
-    public static final String BEAN_NAME = "embeddedMockserver";
+    public static final String BEAN_NAME = "embeddedMockserverContainer";
 
     private int serverPort = 1080;
 

@@ -4,7 +4,7 @@ springboot-testcontainer-mockserver
 [![Maven Central](https://img.shields.io/maven-metadata/v/http/central.maven.org/maven2/com/avides/springboot/testcontainer/springboot-testcontainer-mockserver/maven-metadata.xml.svg)](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.avides.springboot.testcontainer%22%20AND%20a%3A%22springboot-testcontainer-mockserver%22)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3ef2b23118074ae7bbe52a3bd53defad)](https://www.codacy.com/app/avides-builds/springboot-testcontainer-mockserver?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=springboot-testcontainer/springboot-testcontainer-mockserver&amp;utm_campaign=Badge_Grade)
 [![Coverage Status](https://coveralls.io/repos/springboot-testcontainer/springboot-testcontainer-mockserver/badge.svg)](https://coveralls.io/r/springboot-testcontainer/springboot-testcontainer-mockserver)
-[![Build Status](https://travis-ci.org/springboot-testcontainer/springboot-testcontainer-mysql.svg?branch=master)](https://travis-ci.org/springboot-testcontainer/springboot-testcontainer-mockserver)
+[![Build Status](https://travis-ci.org/springboot-testcontainer/springboot-testcontainer-mockserver.svg?branch=master)](https://travis-ci.org/springboot-testcontainer/springboot-testcontainer-mockserver)
 
 ### Dependency
 ```xml
@@ -20,9 +20,6 @@ springboot-testcontainer-mockserver
 Properties consumed (in `bootstrap-it.properties`):
 - `embedded.mockserver.enabled` (default is `true`)
 - `embedded.mockserver.startup-timeout` (default is `30`)
-- `embedded.mockserver.container-network` (default is `bridge`)
-- `embedded.mockserver.stale-containers-cleanup.enabled` (default is `true`)
-- `embedded.mockserver.stale-containers-cleanup.after-minutes` (default is `10`)
 - `embedded.mockserver.docker-image` (default is `jamesdbloom/mockserver:mockserver-5.3.0`)
 - `embedded.mockserver.server-port` (default is `1080`)
 - `embedded.mockserver.proxy-port` (default is `1090`)
