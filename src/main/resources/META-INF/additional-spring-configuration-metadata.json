@@ -1,0 +1,35 @@
+{
+	"groups": [],
+	"properties": [
+		{
+			"name": "embedded.mockserver.enabled",
+			"type": "java.lang.Boolean",
+			"description": "Enables/Disables configuration of mockserver on startup.",
+			"defaultValue": "true"
+		},
+		{
+			"name": "embedded.mockserver.startup-timeout",
+			"description": "Time to wait for a sucessful started container",
+			"type": "java.lang.Integer",
+			"defaultValue": "30"
+		},
+		{
+			"name": "embedded.mockserver.docker-image",
+			"type": "java.lang.String",
+			"description": "Sets Docker image.",
+			"defaultValue": "jamesdbloom/mockserver:mockserver-5.3.0"
+		},
+		{
+			"name": "embedded.mockserver.server-port",
+			"description": "Gets generated server port. (Do not overwrite this!)",
+			"type": "java.lang.String",
+			"defaultValue": "1080"
+		},
+		{
+			"name": "embedded.mockserver.proxy-port",
+			"description": "Gets generated proxy port. (Do not overwrite this!)",
+			"type": "java.lang.String",
+			"defaultValue": "1090"
+		}
+	]
+}
