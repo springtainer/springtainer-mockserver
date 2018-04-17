@@ -32,8 +32,11 @@ public class EmbeddedMockserverContainerAutoConfigurationIT extends AbstractIT
     }
 
     @Test
-    public void testMockserverService() throws Exception
+    public void testMockServerClient() throws Exception
     {
+        assertEquals(environment.getProperty("embedded.container.mockserver.host"), mockServerClient.remoteAddress().getHostString());
+        assertEquals(Integer.parseInt(environment.getProperty("embedded.container.mockserver.server-port")), mockServerClient.remoteAddress().getPort());
+
         mockServerClient.when(HttpRequest.request().withMethod("POST").withPath("/test"))
                 .respond(HttpResponse.response().withStatusCode(Integer.valueOf(666)));
         URL url = new URL(environment.getProperty("embedded.container.mockserver.url") + "/test");
