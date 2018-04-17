@@ -26,12 +26,13 @@ Properties consumed (in `bootstrap-it.properties`):
 
 Properties provided (in `application-it.properties`):
 - `embedded.mockserver.host`
+- `embedded.mockserver.url`
 - `embedded.mockserver.server-port`
 - `embedded.mockserver.proxy-port`
 
 Example for minimal configuration in `application-it.properties`:
 ```
-rest.any-mock-subject.url=http://${embedded.mockserver.host}:${embedded.mockserver.server-port}/
+rest.any-mock-subject.url=${embedded.mockserver.url}
 ```
 
 ## Logging

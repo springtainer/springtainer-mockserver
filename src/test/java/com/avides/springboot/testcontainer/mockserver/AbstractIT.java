@@ -15,7 +15,7 @@ import com.github.dockerjava.api.DockerClient;
 import com.github.dockerjava.core.DockerClientBuilder;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(properties = { "mockservice.host=${embedded.mockserver.host}", "mockservice.port=${embedded.mockserver.server-port}" })
+@SpringBootTest
 @DirtiesContext
 public abstract class AbstractIT
 {

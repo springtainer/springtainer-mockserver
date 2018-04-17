@@ -18,12 +18,14 @@ public class EmbeddedMockserverContainerAutoConfigurationIT extends AbstractIT
     public void testGeneratedProperties() throws InterruptedException
     {
         assertThat(environment.getProperty("embedded.mockserver.host")).isNotEmpty();
+        assertThat(environment.getProperty("embedded.mockserver.url")).isNotEmpty();
         assertThat(environment.getProperty("embedded.mockserver.server-port")).isNotEmpty();
         assertThat(environment.getProperty("embedded.mockserver.proxy-port")).isNotEmpty();
 
         System.out.println();
         System.out.println("Resolved properties:");
         System.out.println("Host:           " + environment.getProperty("embedded.mockserver.host"));
+        System.out.println("Url:            " + environment.getProperty("embedded.mockserver.url"));
         System.out.println("Server Port:    " + environment.getProperty("embedded.mockserver.server-port"));
         System.out.println("Proxy Port:     " + environment.getProperty("embedded.mockserver.proxy-port"));
         System.out.println();
@@ -34,8 +36,7 @@ public class EmbeddedMockserverContainerAutoConfigurationIT extends AbstractIT
     {
         mockServerClient.when(HttpRequest.request().withMethod("POST").withPath("/test"))
                 .respond(HttpResponse.response().withStatusCode(Integer.valueOf(666)));
-        URL url = new URL("http://" + environment.getProperty("embedded.mockserver.host") + ":" + environment
-                .getProperty("embedded.mockserver.server-port") + "/test");
+        URL url = new URL(environment.getProperty("embedded.mockserver.url") + "/test");
         HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
         urlConnection.setRequestMethod("POST");
         assertEquals(666, urlConnection.getResponseCode());

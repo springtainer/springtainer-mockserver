@@ -23,10 +23,9 @@ import com.avides.springboot.testcontainer.common.container.AbstractBuildingEmbe
 import com.avides.springboot.testcontainer.common.container.EmbeddedContainer;
 
 import lombok.Getter;
-import lombok.SneakyThrows;
 
 @Configuration
-@ConditionalOnProperty(name = "embedded.mockserver.enabled", matchIfMissing = true)
+@ConditionalOnProperty(name = "embedded.container.mockserver.enabled", matchIfMissing = true)
 @AutoConfigureOrder(Ordered.HIGHEST_PRECEDENCE)
 @EnableConfigurationProperties(MockserverProperties.class)
 public class EmbeddedMockserverContainerAutoConfiguration
@@ -63,10 +62,10 @@ public class EmbeddedMockserverContainerAutoConfiguration
             provided.put("embedded.mockserver.host", getContainerHost());
             provided.put("embedded.mockserver.server-port", Integer.valueOf(getContainerPort(properties.getServerPort())));
             provided.put("embedded.mockserver.proxy-port", Integer.valueOf(getContainerPort(properties.getProxyPort())));
+            provided.put("embedded.mockserver.url", "http://" + getContainerHost() + ":" + getContainerPort(properties.getServerPort()));
             return provided;
         }
 
-        @SneakyThrows
         @Override
         protected boolean isContainerReady(MockserverProperties properties)
         {

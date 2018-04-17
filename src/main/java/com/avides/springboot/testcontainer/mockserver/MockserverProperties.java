@@ -8,7 +8,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@ConfigurationProperties("embedded.mockserver")
+@ConfigurationProperties("embedded.container.mockserver")
 @Getter
 @Setter
 @ToString(callSuper = true)
