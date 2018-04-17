@@ -18,11 +18,11 @@ springboot-testcontainer-mockserver
 
 ### Configuration
 Properties consumed (in `bootstrap-it.properties`):
-- `embedded.mockserver.enabled` (default is `true`)
-- `embedded.mockserver.startup-timeout` (default is `30`)
-- `embedded.mockserver.docker-image` (default is `jamesdbloom/mockserver:mockserver-5.3.0`)
-- `embedded.mockserver.server-port` (default is `1080`)
-- `embedded.mockserver.proxy-port` (default is `1090`)
+- `embedded.container.mockserver.enabled` (default is `true`)
+- `embedded.container.mockserver.startup-timeout` (default is `30`)
+- `embedded.container.mockserver.docker-image` (default is `jamesdbloom/mockserver:mockserver-5.3.0`)
+- `embedded.container.mockserver.server-port` (default is `1080`)
+- `embedded.container.mockserver.proxy-port` (default is `1090`)
 
 Properties provided (in `application-it.properties`):
 - `embedded.mockserver.host`
