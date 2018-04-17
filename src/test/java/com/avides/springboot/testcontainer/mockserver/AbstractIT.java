@@ -1,7 +1,5 @@
 package com.avides.springboot.testcontainer.mockserver;
 
-import javax.annotation.PostConstruct;
-
 import org.junit.runner.RunWith;
 import org.mockserver.client.server.MockServerClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +8,6 @@ import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.avides.springboot.testcontainer.mockserver.EmbeddedMockserverContainerAutoConfiguration.MockserverContainer;
 import com.github.dockerjava.api.DockerClient;
 import com.github.dockerjava.core.DockerClientBuilder;
 
@@ -25,13 +22,5 @@ public abstract class AbstractIT
     protected ConfigurableEnvironment environment;
 
     @Autowired
-    protected MockserverContainer mockserverContainer;
-
     protected MockServerClient mockServerClient;
-
-    @PostConstruct
-    public void init()
-    {
-        mockServerClient = mockserverContainer.getMockServerClient();
-    }
 }

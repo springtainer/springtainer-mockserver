@@ -1,5 +1,5 @@
 springboot-testcontainer-mockserver
-==============================
+===================================
 
 [![Maven Central](https://img.shields.io/maven-metadata/v/http/central.maven.org/maven2/com/avides/springboot/testcontainer/springboot-testcontainer-mockserver/maven-metadata.xml.svg)](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.avides.springboot.testcontainer%22%20AND%20a%3A%22springboot-testcontainer-mockserver%22)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3ef2b23118074ae7bbe52a3bd53defad)](https://www.codacy.com/app/avides-builds/springboot-testcontainer-mockserver?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=springboot-testcontainer/springboot-testcontainer-mockserver&amp;utm_campaign=Badge_Grade)
@@ -25,15 +25,17 @@ Properties consumed (in `bootstrap-it.properties`):
 - `embedded.container.mockserver.proxy-port` (default is `1090`)
 
 Properties provided (in `application-it.properties`):
-- `embedded.mockserver.host`
-- `embedded.mockserver.url`
-- `embedded.mockserver.server-port`
-- `embedded.mockserver.proxy-port`
+- `embedded.container.mockserver.host`
+- `embedded.container.mockserver.url`
+- `embedded.container.mockserver.server-port`
+- `embedded.container.mockserver.proxy-port`
 
 Example for minimal configuration in `application-it.properties`:
 ```
-rest.any-mock-subject.url=${embedded.mockserver.url}
+rest.any-mock-subject.url=${embedded.container.mockserver.url}
 ```
+
+A properly configured MockServerClient is available as bean.
 
 ## Logging
 To reduce logging insert this into the logback-configuration:

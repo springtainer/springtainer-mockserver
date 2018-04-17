@@ -37,6 +37,12 @@ public class EmbeddedMockserverContainerAutoConfiguration
         return new MockserverContainer("mockserver", environment, properties);
     }
 
+    @Bean
+    public MockServerClient mockServerClient(MockserverContainer mockserverContainer)
+    {
+        return mockserverContainer.getMockServerClient();
+    }
+
     public class MockserverContainer extends AbstractBuildingEmbeddedContainer<MockserverProperties>
     {
         @Getter
@@ -59,10 +65,10 @@ public class EmbeddedMockserverContainerAutoConfiguration
         protected Map<String, Object> providedProperties()
         {
             Map<String, Object> provided = new HashMap<>();
-            provided.put("embedded.mockserver.host", getContainerHost());
-            provided.put("embedded.mockserver.server-port", Integer.valueOf(getContainerPort(properties.getServerPort())));
-            provided.put("embedded.mockserver.proxy-port", Integer.valueOf(getContainerPort(properties.getProxyPort())));
-            provided.put("embedded.mockserver.url", "http://" + getContainerHost() + ":" + getContainerPort(properties.getServerPort()));
+            provided.put("embedded.container.mockserver.host", getContainerHost());
+            provided.put("embedded.container.mockserver.server-port", Integer.valueOf(getContainerPort(properties.getServerPort())));
+            provided.put("embedded.container.mockserver.proxy-port", Integer.valueOf(getContainerPort(properties.getProxyPort())));
+            provided.put("embedded.container.mockserver.url", "http://" + getContainerHost() + ":" + getContainerPort(properties.getServerPort()));
             return provided;
         }
 
