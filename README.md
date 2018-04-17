@@ -47,5 +47,5 @@ To reduce logging insert this into the logback-configuration:
 ## Labels
 The container exports multiple labels to analyze running testcontainers:
 - `TESTCONTAINER_SERVICE=mockserver`
-- `TESTCONTAINER_IMAGE=${embedded.mockserver.docker-image}`
+- `TESTCONTAINER_IMAGE=${embedded.container.mockserver.docker-image}`
 - `TESTCONTAINER_STARTED=$currentTimestamp`
