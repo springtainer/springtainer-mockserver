@@ -11,7 +11,7 @@ springboot-testcontainer-mockserver
 <dependency>
 	<groupId>com.avides.springboot.testcontainer</groupId>
 	<artifactId>springboot-testcontainer-mockserver</artifactId>
-	<version>0.1.0-RC6</version>
+	<version>0.1.0-RC7</version>
 	<scope>test</scope>
 </dependency>
 ```
@@ -20,7 +20,7 @@ springboot-testcontainer-mockserver
 Properties consumed (in `bootstrap-it.properties`):
 - `embedded.container.mockserver.enabled` (default is `true`)
 - `embedded.container.mockserver.startup-timeout` (default is `30`)
-- `embedded.container.mockserver.docker-image` (default is `jamesdbloom/mockserver:mockserver-5.4.1`)
+- `embedded.container.mockserver.docker-image` (default is `jamesdbloom/mockserver:mockserver-5.5.1`)
 - `embedded.container.mockserver.server-port` (default is `1080`)
 - `embedded.container.mockserver.proxy-port` (default is `1090`)
 
