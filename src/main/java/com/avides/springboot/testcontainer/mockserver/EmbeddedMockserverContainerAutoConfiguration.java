@@ -86,7 +86,7 @@ public class EmbeddedMockserverContainerAutoConfiguration
             }
             catch (Exception e)
             {
-                Thread.sleep(500);
+                Thread.sleep(200);
                 return false;
             }
         }
