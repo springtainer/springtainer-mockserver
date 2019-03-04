@@ -23,6 +23,7 @@ import com.avides.springboot.testcontainer.common.container.AbstractBuildingEmbe
 import com.avides.springboot.testcontainer.common.container.EmbeddedContainer;
 
 import lombok.Getter;
+import lombok.SneakyThrows;
 
 @Configuration
 @ConditionalOnProperty(name = "embedded.container.mockserver.enabled", matchIfMissing = true)
@@ -72,13 +73,22 @@ public class EmbeddedMockserverContainerAutoConfiguration
             return provided;
         }
 
+        @SneakyThrows
         @Override
         protected boolean isContainerReady(MockserverProperties properties)
         {
-            mockServerClient = new MockServerClient(getContainerHost(), getContainerPort(properties.getServerPort()));
-            mockServerClient.when(HttpRequest.request().withMethod("POST")).respond(HttpResponse.response().withStatusCode(Integer.valueOf(200)));
-            mockServerClient.reset();
-            return true;
+            try
+            {
+                mockServerClient = new MockServerClient(getContainerHost(), getContainerPort(properties.getServerPort()));
+                mockServerClient.when(HttpRequest.request().withMethod("POST")).respond(HttpResponse.response().withStatusCode(Integer.valueOf(200)));
+                mockServerClient.reset();
+                return true;
+            }
+            catch (Exception e)
+            {
+                Thread.sleep(500);
+                return false;
+            }
         }
     }
 }
