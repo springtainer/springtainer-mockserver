@@ -23,13 +23,11 @@ Properties consumed (in `bootstrap-it.properties`):
 - `embedded.container.mockserver.startup-timeout` (default is `30`)
 - `embedded.container.mockserver.docker-image` (default is `jamesdbloom/mockserver:mockserver-5.7.1`)
 - `embedded.container.mockserver.server-port` (default is `1080`)
-- `embedded.container.mockserver.proxy-port` (default is `1090`)
 
 Properties provided (in `application-it.properties`):
 - `embedded.container.mockserver.host`
 - `embedded.container.mockserver.url`
 - `embedded.container.mockserver.server-port`
-- `embedded.container.mockserver.proxy-port`
 
 Example for minimal configuration in `application-it.properties`:
 ```
