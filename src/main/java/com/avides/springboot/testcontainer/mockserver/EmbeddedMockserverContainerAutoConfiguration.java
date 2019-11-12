@@ -68,7 +68,6 @@ public class EmbeddedMockserverContainerAutoConfiguration
             Map<String, Object> provided = new HashMap<>();
             provided.put("embedded.container.mockserver.host", getContainerHost());
             provided.put("embedded.container.mockserver.server-port", Integer.valueOf(getContainerPort(properties.getServerPort())));
-            provided.put("embedded.container.mockserver.proxy-port", Integer.valueOf(getContainerPort(properties.getProxyPort())));
             provided.put("embedded.container.mockserver.url", "http://" + getContainerHost() + ":" + getContainerPort(properties.getServerPort()));
             return provided;
         }

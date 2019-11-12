@@ -20,13 +20,11 @@ public class EmbeddedMockserverContainerAutoConfigurationIT extends AbstractIT
         assertThat(environment.getProperty("embedded.container.mockserver.host")).isNotEmpty();
         assertThat(environment.getProperty("embedded.container.mockserver.url")).isNotEmpty();
         assertThat(environment.getProperty("embedded.container.mockserver.server-port")).isNotEmpty();
-        assertThat(environment.getProperty("embedded.container.mockserver.proxy-port")).isNotEmpty();
 
         System.out.println();
         System.out.println("Resolved properties:");
         System.out.println("Host:           " + environment.getProperty("embedded.container.mockserver.host"));
         System.out.println("Server Port:    " + environment.getProperty("embedded.container.mockserver.server-port"));
-        System.out.println("Proxy Port:     " + environment.getProperty("embedded.container.mockserver.proxy-port"));
         System.out.println("Url:            " + environment.getProperty("embedded.container.mockserver.url"));
         System.out.println();
     }

@@ -13,10 +13,9 @@ public class MockserverPropertiesTest
         MockserverProperties properties = new MockserverProperties();
         assertTrue(properties.isEnabled());
         assertEquals(30, properties.getStartupTimeout());
-        assertEquals("jamesdbloom/mockserver:mockserver-5.5.1", properties.getDockerImage());
+        assertEquals("jamesdbloom/mockserver:mockserver-5.7.1", properties.getDockerImage());
 
         assertEquals(1080, properties.getServerPort());
-        assertEquals(1090, properties.getProxyPort());
         assertEquals("ERROR", properties.getLogLevel());
     }
 }

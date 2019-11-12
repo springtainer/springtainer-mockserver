@@ -18,12 +18,10 @@ public class MockserverProperties extends AbstractEmbeddedContainerProperties
 
     private int serverPort = 1080;
 
-    private int proxyPort = 1090;
-
     private String logLevel = "ERROR";
 
     public MockserverProperties()
     {
-        setDockerImage("jamesdbloom/mockserver:mockserver-5.5.1");
+        setDockerImage("jamesdbloom/mockserver:mockserver-5.7.1");
     }
 }
