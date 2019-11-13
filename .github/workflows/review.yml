@@ -44,7 +44,7 @@ jobs:
             -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
             -Dsonar.organization=${SONAR_ORGANIZATION} \
             -Dsonar.projectKey=${GITHUB_REPOSITORY//\//_} \
-            -Dsonar.pullrequest.key=${GITHUB_PULL_REQUEST}
+            -Dsonar.pullrequest.key=${GITHUB_PULL_REQUEST} \
             -Dsonar.java.binaries=./target/classes
 
       - name: pom-analyse
