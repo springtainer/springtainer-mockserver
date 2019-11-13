@@ -1,17 +1,18 @@
-springboot-testcontainer-mockserver
-===================================
+# springboot-testcontainer-mockserver
 
 [![Maven Central](https://img.shields.io/maven-metadata/v/http/central.maven.org/maven2/com/avides/springboot/testcontainer/springboot-testcontainer-mockserver/maven-metadata.xml.svg)](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.avides.springboot.testcontainer%22%20AND%20a%3A%22springboot-testcontainer-mockserver%22)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3ef2b23118074ae7bbe52a3bd53defad)](https://www.codacy.com/app/avides-builds/springboot-testcontainer-mockserver)
-[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/3ef2b23118074ae7bbe52a3bd53defad)](https://www.codacy.com/app/avides-builds/springboot-testcontainer-mockserver)
-[![Build Status](https://travis-ci.org/springboot-testcontainer/springboot-testcontainer-mockserver.svg?branch=master)](https://travis-ci.org/springboot-testcontainer/springboot-testcontainer-mockserver)
+[![Build](https://github.com/springboot-testcontainer/springboot-testcontainer-mockserver/workflows/release/badge.svg)](https://github.com/springboot-testcontainer/springboot-testcontainer-mockserver/actions)
+[![Nightly build](https://github.com/springboot-testcontainer/springboot-testcontainer-mockserver/workflows/nightly/badge.svg)](https://github.com/springboot-testcontainer/springboot-testcontainer-mockserver/actions)
+[![Coverage report](https://sonarcloud.io/api/project_badges/measure?project=springboot-testcontainer_springboot-testcontainer-mockserver&metric=coverage)](https://sonarcloud.io/dashboard?id=springboot-testcontainer_springboot-testcontainer-mockserver)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=springboot-testcontainer_springboot-testcontainer-mockserver&metric=alert_status)](https://sonarcloud.io/dashboard?id=springboot-testcontainer_springboot-testcontainer-mockserver)
+[![Technical dept](https://sonarcloud.io/api/project_badges/measure?project=springboot-testcontainer_springboot-testcontainer-mockserver&metric=sqale_index)](https://sonarcloud.io/dashboard?id=springboot-testcontainer_springboot-testcontainer-mockserver)
 
 ### Dependency
 ```xml
 <dependency>
 	<groupId>com.avides.springboot.testcontainer</groupId>
 	<artifactId>springboot-testcontainer-mockserver</artifactId>
-	<version>0.1.0-RC10</version>
+	<version>1.0.0-RC1</version>
 	<scope>test</scope>
 </dependency>
 ```
@@ -20,15 +21,13 @@ springboot-testcontainer-mockserver
 Properties consumed (in `bootstrap-it.properties`):
 - `embedded.container.mockserver.enabled` (default is `true`)
 - `embedded.container.mockserver.startup-timeout` (default is `30`)
-- `embedded.container.mockserver.docker-image` (default is `jamesdbloom/mockserver:mockserver-5.5.1`)
+- `embedded.container.mockserver.docker-image` (default is `jamesdbloom/mockserver:mockserver-5.7.1`)
 - `embedded.container.mockserver.server-port` (default is `1080`)
-- `embedded.container.mockserver.proxy-port` (default is `1090`)
 
 Properties provided (in `application-it.properties`):
 - `embedded.container.mockserver.host`
 - `embedded.container.mockserver.url`
 - `embedded.container.mockserver.server-port`
-- `embedded.container.mockserver.proxy-port`
 
 Example for minimal configuration in `application-it.properties`:
 ```

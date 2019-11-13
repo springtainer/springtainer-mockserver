@@ -17,19 +17,13 @@
 			"name": "embedded.container.mockserver.docker-image",
 			"type": "java.lang.String",
 			"description": "Sets Docker image.",
-			"defaultValue": "jamesdbloom/mockserver:mockserver-5.5.1"
+			"defaultValue": "jamesdbloom/mockserver:mockserver-5.7.1"
 		},
 		{
 			"name": "embedded.container.mockserver.server-port",
 			"description": "Gets generated server port. (Do not overwrite this!)",
 			"type": "java.lang.String",
 			"defaultValue": "1080"
-		},
-		{
-			"name": "embedded.container.mockserver.proxy-port",
-			"description": "Gets generated proxy port. (Do not overwrite this!)",
-			"type": "java.lang.String",
-			"defaultValue": "1090"
 		}
 	]
 }
