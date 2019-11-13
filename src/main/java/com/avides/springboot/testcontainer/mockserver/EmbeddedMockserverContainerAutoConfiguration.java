@@ -44,11 +44,6 @@ public class EmbeddedMockserverContainerAutoConfiguration
         return mockserverContainer.getMockServerClient();
     }
 
-    private static int showSonarQubeIssues()
-    {
-        return 1 / 0;
-    }
-
     public class MockserverContainer extends AbstractBuildingEmbeddedContainer<MockserverProperties>
     {
         @Getter
