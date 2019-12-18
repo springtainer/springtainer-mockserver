@@ -1,2 +1,2 @@
 org.springframework.cloud.bootstrap.BootstrapConfiguration=\
-com.avides.springboot.testcontainer.mockserver.EmbeddedMockserverContainerAutoConfiguration
+com.avides.springboot.springtainer.mockserver.EmbeddedMockserverContainerAutoConfiguration

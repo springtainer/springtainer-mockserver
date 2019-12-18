@@ -1,18 +1,18 @@
-# springboot-testcontainer-mockserver
+# springtainer-mockserver
 
-[![Maven Central](https://img.shields.io/maven-metadata/v/http/central.maven.org/maven2/com/avides/springboot/testcontainer/springboot-testcontainer-mockserver/maven-metadata.xml.svg)](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.avides.springboot.testcontainer%22%20AND%20a%3A%22springboot-testcontainer-mockserver%22)
-[![Build](https://github.com/springboot-testcontainer/springboot-testcontainer-mockserver/workflows/release/badge.svg)](https://github.com/springboot-testcontainer/springboot-testcontainer-mockserver/actions)
-[![Nightly build](https://github.com/springboot-testcontainer/springboot-testcontainer-mockserver/workflows/nightly/badge.svg)](https://github.com/springboot-testcontainer/springboot-testcontainer-mockserver/actions)
-[![Coverage report](https://sonarcloud.io/api/project_badges/measure?project=springboot-testcontainer_springboot-testcontainer-mockserver&metric=coverage)](https://sonarcloud.io/dashboard?id=springboot-testcontainer_springboot-testcontainer-mockserver)
-[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=springboot-testcontainer_springboot-testcontainer-mockserver&metric=alert_status)](https://sonarcloud.io/dashboard?id=springboot-testcontainer_springboot-testcontainer-mockserver)
-[![Technical dept](https://sonarcloud.io/api/project_badges/measure?project=springboot-testcontainer_springboot-testcontainer-mockserver&metric=sqale_index)](https://sonarcloud.io/dashboard?id=springboot-testcontainer_springboot-testcontainer-mockserver)
+[![Maven Central](https://img.shields.io/maven-metadata/v/http/central.maven.org/maven2/com/avides/springtainer/springtainer-mockserver/maven-metadata.xml.svg)](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.avides.springboot.springtainer%22%20AND%20a%3A%22springtainer-mockserver%22)
+[![Build](https://github.com/springtainer/springtainer-mockserver/workflows/release/badge.svg)](https://github.com/springtainer/springtainer-mockserver/actions)
+[![Nightly build](https://github.com/springtainer/springtainer-mockserver/workflows/nightly/badge.svg)](https://github.com/springtainer/springtainer-mockserver/actions)
+[![Coverage report](https://sonarcloud.io/api/project_badges/measure?project=springtainer_springtainer-mockserver&metric=coverage)](https://sonarcloud.io/dashboard?id=springtainer_springtainer-mockserver)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=springtainer_springtainer-mockserver&metric=alert_status)](https://sonarcloud.io/dashboard?id=springtainer_springtainer-mockserver)
+[![Technical dept](https://sonarcloud.io/api/project_badges/measure?project=springtainer_springtainer-mockserver&metric=sqale_index)](https://sonarcloud.io/dashboard?id=springtainer_springtainer-mockserver)
 
 ### Dependency
 ```xml
 <dependency>
-	<groupId>com.avides.springboot.testcontainer</groupId>
-	<artifactId>springboot-testcontainer-mockserver</artifactId>
-	<version>1.0.0-RC2</version>
+	<groupId>com.avides.springboot.springtainer</groupId>
+	<artifactId>springtainer-mockserver</artifactId>
+	<version>1.0.0</version>
 	<scope>test</scope>
 </dependency>
 ```
