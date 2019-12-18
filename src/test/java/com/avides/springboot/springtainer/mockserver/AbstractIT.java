@@ -1,4 +1,4 @@
-package com.avides.springboot.testcontainer.mockserver;
+package com.avides.springboot.springtainer.mockserver;
 
 import org.junit.runner.RunWith;
 import org.mockserver.client.MockServerClient;
