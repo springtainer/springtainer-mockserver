@@ -1,6 +1,6 @@
 # springtainer-mockserver
 
-[![Maven Central](https://img.shields.io/maven-metadata/v/http/central.maven.org/maven2/com/avides/springtainer/springtainer-mockserver/maven-metadata.xml.svg)](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.avides.springboot.springtainer%22%20AND%20a%3A%22springtainer-mockserver%22)
+[![Maven Central](https://img.shields.io/maven-metadata/v/http/central.maven.org/maven2/com/avides/springboot/springtainer/springtainer-mockserver/maven-metadata.xml.svg)](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.avides.springboot.springtainer%22%20AND%20a%3A%22springtainer-mockserver%22)
 [![Build](https://github.com/springtainer/springtainer-mockserver/workflows/release/badge.svg)](https://github.com/springtainer/springtainer-mockserver/actions)
 [![Nightly build](https://github.com/springtainer/springtainer-mockserver/workflows/nightly/badge.svg)](https://github.com/springtainer/springtainer-mockserver/actions)
 [![Coverage report](https://sonarcloud.io/api/project_badges/measure?project=springtainer_springtainer-mockserver&metric=coverage)](https://sonarcloud.io/dashboard?id=springtainer_springtainer-mockserver)
@@ -39,14 +39,14 @@ A properly configured MockServerClient is available as bean.
 ## Logging
 To reduce logging insert this into the logback-configuration:
 ```xml
-<!-- Testcontainers -->
+<!-- Springtainer -->
 <logger name="com.github.dockerjava.jaxrs" level="WARN" />
 <logger name="com.github.dockerjava.core.command" level="WARN" />
 <logger name="org.apache.http" level="WARN" />
 ```
 
 ## Labels
-The container exports multiple labels to analyze running testcontainers:
-- `TESTCONTAINER_SERVICE=mockserver`
-- `TESTCONTAINER_IMAGE=${embedded.container.mockserver.docker-image}`
-- `TESTCONTAINER_STARTED=$currentTimestamp`
+The container exports multiple labels to analyze running springtainers:
+- `SPRINGTAINER_SERVICE=mockserver`
+- `SPRINGTAINER_IMAGE=${embedded.container.mockserver.docker-image}`
+- `SPRINGTAINER_STARTED=$currentTimestamp`
