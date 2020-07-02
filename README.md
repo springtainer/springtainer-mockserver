@@ -12,7 +12,7 @@
 <dependency>
 	<groupId>com.avides.springboot.springtainer</groupId>
 	<artifactId>springtainer-mockserver</artifactId>
-	<version>1.1.0</version>
+	<version>1.1.1</version>
 	<scope>test</scope>
 </dependency>
 ```
@@ -21,7 +21,7 @@
 Properties consumed (in `bootstrap-it.properties`):
 - `embedded.container.mockserver.enabled` (default is `true`)
 - `embedded.container.mockserver.startup-timeout` (default is `30`)
-- `embedded.container.mockserver.docker-image` (default is `jamesdbloom/mockserver:mockserver-5.10.0`)
+- `embedded.container.mockserver.docker-image` (default is `jamesdbloom/mockserver:mockserver-5.7.1`)
 - `embedded.container.mockserver.server-port` (default is `1080`)
 
 Properties provided (in `application-it.properties`):
