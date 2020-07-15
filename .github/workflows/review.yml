@@ -16,6 +16,16 @@ jobs:
         with:
           java-version: 11
 
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GPR_TOKEN }}
+          fetch-depth: ''
+
+      - name: post-checkout
+        run: git fetch --prune --unshallow
+
       - name: action-configuration-autoupdate
         id: actions_action_configuration_autoupdate
         uses: avides/actions-action-configuration-autoupdate@v1
@@ -23,6 +33,7 @@ jobs:
           token: ${{ secrets.GPR_TOKEN }}
           actions-configuration-files: os-java-library/nightly.yml,os-library/release.yml,os-library/review.yml
           source-repository: ${{ secrets.ACTIONS_CONFIG_AUTOUPDATE_REPO }}
+          source-ref: IT-357
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
