@@ -31,7 +31,7 @@ jobs:
         uses: avides/actions-action-configuration-autoupdate@v1
         with:
           token: ${{ secrets.GPR_TOKEN }}
-          actions-configuration-files: os-java-library/nightly.yml,os-library/release.yml,os-library/review.yml
+          actions-configuration-files: os-java-library/nightly.yml,os-java-library/release.yml,os-java-library/review.yml
           source-repository: ${{ secrets.ACTIONS_CONFIG_AUTOUPDATE_REPO }}
           source-ref: IT-357
 
