@@ -85,3 +85,4 @@ jobs:
 
       - name: pom-analyse
         run: mvn enforcer:enforce
+
