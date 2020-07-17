@@ -33,7 +33,6 @@ jobs:
           token: ${{ secrets.GPR_TOKEN }}
           actions-configuration-files: os-java-library/nightly.yml,os-java-library/release.yml,os-java-library/review.yml
           source-repository: ${{ secrets.ACTIONS_CONFIG_AUTOUPDATE_REPO }}
-          source-ref: IT-357
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
@@ -42,6 +41,10 @@ jobs:
           commit_user_email: ${{ secrets.ACTIONS_CONFIG_AUTOUPDATE_EMAIL }}
           commit_author: ${{ secrets.ACTIONS_CONFIG_AUTOUPDATE_AUTHOR }}
           commit_message: Update GitHub Action configuration
+
+      - name: action-configuration-updated
+        if: ${{ steps.actions_action_configuration_autoupdate.outputs.updated }}
+        run: exit 1;
 
       - name: project-version-check
         uses: avides/actions-project-version-check@v1
@@ -85,4 +88,3 @@ jobs:
 
       - name: pom-analyse
         run: mvn enforcer:enforce
-
