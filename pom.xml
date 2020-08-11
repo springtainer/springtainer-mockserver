@@ -3,7 +3,7 @@
 
   <groupId>com.avides.springboot.springtainer</groupId>
   <artifactId>springtainer-mockserver</artifactId>
-  <version>1.1.1</version>
+  <version>1.2.0</version>
 
   <name>springtainer-mockserver</name>
   <description>Mockserver test-container</description>
@@ -56,7 +56,7 @@
     <spring-boot.version>2.3.1.RELEASE</spring-boot.version>
     <!-- Other -->
     <lombok.version>1.18.12</lombok.version>
-    <springtainer-common.version>1.1.2</springtainer-common.version>
+    <springtainer-common.version>1.2.0</springtainer-common.version>
     <mockserver-client-java.version>5.7.1</mockserver-client-java.version><!-- Don't upgrade the version, in 5.10.X is a performance bug that occurs to failed CI builds: https://github.com/mock-server/mockserver/issues/807 -->
     <!-- Testing -->
     <jacoco.version>0.8.5</jacoco.version>
