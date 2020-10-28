@@ -3,7 +3,7 @@ name: release
 on:
   push:
     branches:
-      - LIBS-762
+      - master
 
 jobs:
   release:
