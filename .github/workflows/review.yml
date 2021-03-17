@@ -101,7 +101,7 @@ jobs:
       - name: integration-tests
         run: mvn -DskipUTs -Dgpg.skip=true jacoco:restore-instrumented-classes verify
 
-      # Execute sonar analysis for current branch
+       # Execute sonar analysis for current branch
       - name: sonar-analyse
         env:
           SONAR_HOST: ${{ secrets.OS_SONAR_HOST_URL }}
