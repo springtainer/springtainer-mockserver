@@ -10,10 +10,10 @@
 ### Dependency
 ```xml
 <dependency>
-	<groupId>com.avides.springboot.springtainer</groupId>
-	<artifactId>springtainer-mockserver</artifactId>
-	<version>1.3.0-RC2</version>
-	<scope>test</scope>
+  <groupId>com.avides.springboot.springtainer</groupId>
+  <artifactId>springtainer-mockserver</artifactId>
+  <version>1.3.0</version>
+  <scope>test</scope>
 </dependency>
 ```
 
