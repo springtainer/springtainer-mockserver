@@ -8,28 +8,34 @@
 [![Technical dept](https://sonarcloud.io/api/project_badges/measure?project=springtainer_springtainer-mockserver&metric=sqale_index)](https://sonarcloud.io/dashboard?id=springtainer_springtainer-mockserver)
 
 ### Dependency
+
 ```xml
+
 <dependency>
   <groupId>com.avides.springboot.springtainer</groupId>
   <artifactId>springtainer-mockserver</artifactId>
-  <version>1.3.0</version>
+  <version>1.4.0</version>
   <scope>test</scope>
 </dependency>
 ```
 
 ### Configuration
+
 Properties consumed (in `bootstrap-it.properties`):
+
 - `embedded.container.mockserver.enabled` (default is `true`)
 - `embedded.container.mockserver.startup-timeout` (default is `30`)
-- `embedded.container.mockserver.docker-image` (default is `jamesdbloom/mockserver:mockserver-5.7.1`)
+- `embedded.container.mockserver.docker-image` (default is `jamesdbloom/mockserver:mockserver-5.11.2`)
 - `embedded.container.mockserver.server-port` (default is `1080`)
 
 Properties provided (in `application-it.properties`):
+
 - `embedded.container.mockserver.host`
 - `embedded.container.mockserver.url`
 - `embedded.container.mockserver.server-port`
 
 Example for minimal configuration in `application-it.properties`:
+
 ```
 rest.any-mock-subject.url=${embedded.container.mockserver.url}
 ```
@@ -37,7 +43,9 @@ rest.any-mock-subject.url=${embedded.container.mockserver.url}
 A properly configured MockServerClient is available as bean.
 
 ## Logging
+
 To reduce logging insert this into the logback-configuration:
+
 ```xml
 <!-- Springtainer -->
 <logger name="com.github.dockerjava.jaxrs" level="WARN" />
@@ -46,7 +54,9 @@ To reduce logging insert this into the logback-configuration:
 ```
 
 ## Labels
+
 The container exports multiple labels to analyze running springtainers:
+
 - `SPRINGTAINER_SERVICE=mockserver`
 - `SPRINGTAINER_IMAGE=${embedded.container.mockserver.docker-image}`
 - `SPRINGTAINER_STARTED=$currentTimestamp`
