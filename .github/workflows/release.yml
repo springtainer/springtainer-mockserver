@@ -39,6 +39,14 @@ jobs:
       # Checkout the git repository
       - name: checkout
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GPR_TOKEN }}
+          fetch-depth: ''
+
+      # Execute some necessary git commands to get more repository informations
+      - name: post-checkout
+        run: git fetch --prune --unshallow
 
       # Setup GitHub Actions caching for external dependencies, in this case especially for Maven
       - name: caching
