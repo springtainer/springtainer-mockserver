@@ -22,6 +22,6 @@ public class MockserverProperties extends AbstractEmbeddedContainerProperties
 
     public MockserverProperties()
     {
-        setDockerImage("jamesdbloom/mockserver:mockserver-5.11.1");
+        setDockerImage("jamesdbloom/mockserver:mockserver-5.11.2");
     }
 }
