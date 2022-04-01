@@ -72,18 +72,19 @@ public class EmbeddedMockserverContainerAutoConfiguration
             return provided;
         }
 
+        @SuppressWarnings("resource")
         @SneakyThrows
         @Override
-        protected boolean isContainerReady(MockserverProperties properties)
+        protected boolean isContainerReady(MockserverProperties mockserverProperties)
         {
             try
             {
-                mockServerClient = new MockServerClient(getContainerHost(), getContainerPort(properties.getServerPort()));
+                mockServerClient = new MockServerClient(getContainerHost(), getContainerPort(mockserverProperties.getServerPort()));
                 mockServerClient.when(HttpRequest.request().withMethod("POST")).respond(HttpResponse.response().withStatusCode(Integer.valueOf(200)));
                 mockServerClient.reset();
                 return true;
             }
-            catch (Exception e)
+            catch (@SuppressWarnings("unused") Exception e)
             {
                 Thread.sleep(200);
                 return false;
