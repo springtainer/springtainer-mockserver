@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 public class EmbeddedMockserverContainerAutoConfigurationIT extends AbstractIT
 {
     @Test
-    public void testGeneratedProperties() throws InterruptedException
+    public void testGeneratedProperties()
     {
         assertThat(environment.getProperty("embedded.container.mockserver.host")).isNotEmpty();
         assertThat(environment.getProperty("embedded.container.mockserver.url")).isNotEmpty();
