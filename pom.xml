@@ -51,7 +51,7 @@
     <maven-failsafe-plugin.version>3.0.0-M5</maven-failsafe-plugin.version>
     <maven-enforcer-plugin.version>3.0.0</maven-enforcer-plugin.version>
     <maven-release-plugin.version>3.0.0-M5</maven-release-plugin.version>
-    <maven-scm-provider-gitexe.version>1.11.2</maven-scm-provider-gitexe.version>
+    <maven-scm-provider-gitexe.version>1.11.3</maven-scm-provider-gitexe.version>
     <exists-maven-plugin.version>0.6.0</exists-maven-plugin.version>
     <github-release-plugin.version>1.4.0</github-release-plugin.version>
     <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
