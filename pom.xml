@@ -3,7 +3,7 @@
 
   <groupId>com.avides.springboot.springtainer</groupId>
   <artifactId>springtainer-mockserver</artifactId>
-  <version>2.0.1</version>
+  <version>2.0.2</version>
 
   <name>springtainer-mockserver</name>
   <description>Mockserver test-container</description>
@@ -93,6 +93,16 @@
       <groupId>org.mock-server</groupId>
       <artifactId>mockserver-client-java</artifactId>
       <version>${mockserver-client-java.version}</version>
+      <exclusions>
+        <!-- mockserver-core's Prometheus metrics support pulls prometheus-metrics-tracer-otel, which drags in just enough of the OpenTelemetry
+             SDK for Boot 3.5's OpenTelemetryLoggingAutoConfiguration to match @ConditionalOnClass without a real OTel SDK setup being present,
+             causing UnsatisfiedDependencyException: no bean of type Resource in any consumer's full-context tests. Excluded since no consumer
+             actually configures OTel logging export. -->
+        <exclusion>
+          <groupId>io.prometheus</groupId>
+          <artifactId>prometheus-metrics-tracer-otel</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
