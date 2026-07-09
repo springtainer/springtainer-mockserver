@@ -9,14 +9,14 @@ import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.github.dockerjava.api.DockerClient;
-import com.github.dockerjava.core.DockerClientBuilder;
+import com.avides.springboot.springtainer.common.util.DockerClients;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
 @DirtiesContext
 public abstract class AbstractIT
 {
-    protected DockerClient dockerClient = DockerClientBuilder.getInstance().build();
+    protected DockerClient dockerClient = DockerClients.build();
 
     @Autowired
     protected ConfigurableEnvironment environment;
