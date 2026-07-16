@@ -1,16 +1,14 @@
 # springtainer-mockserver
 
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.avides.springboot.springtainer/springtainer-mockserver/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.avides.springboot.springtainer/springtainer-mockserver)
-[![Build](https://github.com/springtainer/springtainer-mockserver/workflows/release/badge.svg)](https://github.com/springtainer/springtainer-mockserver/actions)
-[![Nightly build](https://github.com/springtainer/springtainer-mockserver/workflows/nightly/badge.svg)](https://github.com/springtainer/springtainer-mockserver/actions)
-[![Coverage report](https://sonarcloud.io/api/project_badges/measure?project=springtainer_springtainer-mockserver&metric=coverage)](https://sonarcloud.io/dashboard?id=springtainer_springtainer-mockserver)
-[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=springtainer_springtainer-mockserver&metric=alert_status)](https://sonarcloud.io/dashboard?id=springtainer_springtainer-mockserver)
-[![Technical dept](https://sonarcloud.io/api/project_badges/measure?project=springtainer_springtainer-mockserver&metric=sqale_index)](https://sonarcloud.io/dashboard?id=springtainer_springtainer-mockserver)
+[![Maven Central](https://img.shields.io/maven-central/v/com.avides.springboot.springtainer/springtainer-mockserver.svg?label=maven-central)](https://search.maven.org/artifact/com.avides.springboot.springtainer/springtainer-mockserver)
+[![Release](https://github.com/springtainer/springtainer-mockserver/actions/workflows/release.yml/badge.svg)](https://github.com/springtainer/springtainer-mockserver/actions/workflows/release.yml)
+[![Nightly build](https://github.com/springtainer/springtainer-mockserver/actions/workflows/nightly.yml/badge.svg)](https://github.com/springtainer/springtainer-mockserver/actions/workflows/nightly.yml)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=springtainer_springtainer-mockserver&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=springtainer_springtainer-mockserver)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=springtainer_springtainer-mockserver&metric=coverage)](https://sonarcloud.io/summary/new_code?id=springtainer_springtainer-mockserver)
 
 ### Dependency
 
 ```xml
-
 <dependency>
   <groupId>com.avides.springboot.springtainer</groupId>
   <artifactId>springtainer-mockserver</artifactId>
