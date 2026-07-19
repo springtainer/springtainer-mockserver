@@ -17,7 +17,7 @@
 			"name": "embedded.container.mockserver.docker-image",
 			"type": "java.lang.String",
 			"description": "Sets Docker image.",
-			"defaultValue": "mockserver/mockserver:mockserver-5.15.0"
+			"defaultValue": "mockserver/mockserver:mockserver-7.4.0"
 		},
 		{
 			"name": "embedded.container.mockserver.server-port",
