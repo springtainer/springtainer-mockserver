@@ -1,12 +1,13 @@
 package com.avides.springboot.springtainer.mockserver;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.net.HttpURLConnection;
+import java.net.URI;
 import java.net.URL;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.mockserver.model.HttpRequest;
 import org.mockserver.model.HttpResponse;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -37,7 +38,7 @@ public class EmbeddedMockserverContainerAutoConfigurationIT extends AbstractIT
 
         mockServerClient.when(HttpRequest.request().withMethod("POST").withPath("/test"))
                 .respond(HttpResponse.response().withStatusCode(Integer.valueOf(666)));
-        URL url = new URL(environment.getProperty("embedded.container.mockserver.url") + "/test");
+        URL url = URI.create(environment.getProperty("embedded.container.mockserver.url") + "/test").toURL();
         HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
         urlConnection.setRequestMethod("POST");
         assertEquals(666, urlConnection.getResponseCode());
