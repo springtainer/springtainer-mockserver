@@ -13,7 +13,7 @@ public class MockserverPropertiesTest
         MockserverProperties properties = new MockserverProperties();
         assertTrue(properties.isEnabled());
         assertEquals(30, properties.getStartupTimeout());
-        assertEquals("mockserver/mockserver:mockserver-7.4.0", properties.getDockerImage());
+        assertEquals("mockserver/mockserver:mockserver-7.5.0", properties.getDockerImage());
 
         assertEquals(1080, properties.getServerPort());
         assertEquals("ERROR", properties.getLogLevel());
